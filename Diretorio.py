@@ -17,6 +17,7 @@ def Arquivos(caminho):
 def Verificar(arquivos,caminho,nome):
 
     # Verifica se já existe um arquivo com aquele nome
+    existe = 0
     for arquivo in arquivos:
         comparacao = f'{caminho}\{nome}.png'
         if comparacao == arquivo:
@@ -26,6 +27,6 @@ def Verificar(arquivos,caminho,nome):
             existe = 0
         # if
     # for
-    
+
     return existe
 # Verificar

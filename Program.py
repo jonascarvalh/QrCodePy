@@ -1,6 +1,8 @@
 import shutil
 import Tamanho as tam
 import Diretorio as Dir
+import os
+
 from pathlib import Path
 
 # Criação da pasta 'imagens'
@@ -17,6 +19,7 @@ while (1):
     if (existe == 0): 
         break
     else:
+        os.system('cls')
         print('Indique outro nome para o arquivo!')
     # if
 # while
@@ -32,7 +35,7 @@ imagem = qr.make_image( fill_color = "black", back_color="white")
 # Saída: Salvando QR Code e movendo para a pasta "imagens"
 imagem.save(f'{nome}.png')
 
-source = f'./{nome}.png'
+source = f'.\{nome}.png'
 shutil.move(source,caminho)
 
 print(f'\nA imagem foi gerada em: {caminho}\{nome}.png !')
