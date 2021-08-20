@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 
 # Criação da pasta 'imagens'
-caminho = ('.\imagens')
+caminho = ('imagens')
 Path(caminho).mkdir(exist_ok=True)
 arquivos = Dir.Arquivos(caminho)
 
@@ -30,12 +30,12 @@ qr = tam.EscolhaTamanho()
 # Processamento: Criação da Imagem
 qr.add_data(link)
 qr.make(fit = True)
-imagem = qr.make_image( fill_color = "black", back_color="white")
+imagem = qr.make_image( fill_color = "black", back_color="white" )
 
 # Saída: Salvando QR Code e movendo para a pasta "imagens"
 imagem.save(f'{nome}.png')
 
-source = f'.\{nome}.png'
+source = f'{nome}.png'
 shutil.move(source,caminho)
 
-print(f'\nA imagem foi gerada em: {caminho}\{nome}.png !')
+print(f'\nO QR Code foi gerado em {caminho} !')

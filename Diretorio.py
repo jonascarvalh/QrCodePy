@@ -19,7 +19,7 @@ def Verificar(arquivos,caminho,nome):
     # Verifica se já existe um arquivo com aquele nome
     existe = 0
     for arquivo in arquivos:
-        comparacao = f'{caminho}\{nome}.png'
+        comparacao = os.path.join(caminho,f'{nome}.png')
         if comparacao == arquivo:
             existe = 1
             break
